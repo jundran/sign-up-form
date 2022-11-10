@@ -16,8 +16,8 @@ body {
   display: flex;
 }
 
-/* LEFT SIDE */
-.left {
+/* IMAGE CONTAINER */
+.image-container {
   position: relative;
   max-width: 40%;
 }
@@ -62,8 +62,8 @@ img {
   color: inherit;
 }
 
-/* RIGHT SIDE */
-.right {
+/* MAIN CONTENT */
+.main {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -139,4 +139,20 @@ button {
   text-decoration: none;
   color: #596D48;
   font-weight: 700;
+}
+
+@media(max-width: 700px) {
+  .container,
+  fieldset {
+    flex-direction: column;
+  }
+
+  .image-container {
+    position: relative;
+    max-width: 100%;
+  }
+
+  fieldset {
+    gap: 0;
+  }
 }
