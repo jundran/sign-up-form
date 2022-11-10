@@ -19,7 +19,7 @@ body {
 /* IMAGE CONTAINER */
 .image-container {
   position: relative;
-  max-width: 40%;
+  max-width: 45%;
 }
 
 img {
@@ -114,20 +114,44 @@ label {
 input {
   display: block;
   border: 1px solid #E5E7EB;
-  border-radius: 1px;
+  border-radius: 4px;
 }
 
+/* Firefox only */
 input:user-invalid {
   border-color: red;
 }
 
+@supports not selector(input:user-invalid) {
+  input:invalid {
+    border-color: orange;
+  }
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid blue;
+  box-shadow: 1px 1px 2px #444;
+}
+
 button {
-  border: none;
+  border: 1px solid transparent;
   border-radius: 8px;
   color: #eee;
   background-color: #596D48;
   font-weight: 700;
   padding: 8px 32px;
+  cursor: pointer;
+}
+
+button:focus,
+button:hover {
+  background-color: #eee;
+  color: #596D48;
+}
+
+button:hover {
+  border: 1px solid currentColor;
 }
 
 .login {
@@ -142,17 +166,18 @@ button {
 }
 
 @media(max-width: 700px) {
-  .container,
-  fieldset {
-    flex-direction: column;
-  }
-
   .image-container {
     position: relative;
     max-width: 100%;
   }
 
+  .container,
   fieldset {
+    flex-direction: column;
     gap: 0;
+  }
+
+  .form-right ul{
+    margin-top: 0;
   }
 }

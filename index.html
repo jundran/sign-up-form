@@ -32,23 +32,40 @@
       </p>
     </div>
 
-    <form action="">
+    <form action="" method="">
       <div class="form-main">
         <strong>Let's do this!</strong>
         <fieldset>
           <legend>Sign up</legend>
           <div class="form-left">
             <ul>
-              <li><label for="firstname">First Name</label><input type="text"></li>
-              <li><label for="email">Email</label><input type="email"></li>
-              <li><label for="password">Password</label><input type="password"></li>
+              <li><label for="firstname">First Name <span aria-label="required">*</span></label>
+                <input type="text" required minlength="2" maxlength="20" autocomplete="given-name">
+              </li>
+              <li>
+                <label for="surname">Last Name <span aria-label="required">*</span></label>
+                <input type="text" required minlength="2" maxlength="20" autocomplete="family-name">
+              </li>
+              <li>
+                <label for="email">Email <span aria-label="required">*</span></label>
+                <input type="email" required maxlength="60" inputmode="email" autocomplete="email">
+              </li>
             </ul>
           </div>
           <div class="form-right">
             <ul>
-              <li><label for="surname">Last Name</label><input type="text"></li>
-              <li><label for="phone">Phone Number</label><input type="tel"></li>
-              <li><label for="passwordconfirm">Password</label><input type="password"></li>
+              <li>
+                <label for="phone">Phone Number</label>
+                <input type="tel" minlength="10" maxlength="10" pattern="\d{10}" inputmode="tel" autocomplete="tel">
+              </li>
+              <li>
+                <label for="password">Password <span aria-label="required">*</span></label>
+                <input type="password" required minlength="9" maxlength="64" autocomplete="new-password">
+              </li>
+              <li>
+                <label for="passwordconfirm">Password Confirm<span aria-label="required">*</span></label>
+                <input type="password" required minlength="9" maxlength="64" autocomplete="new-password">
+              </li>
             </ul>
           </div>
         </fieldset>
