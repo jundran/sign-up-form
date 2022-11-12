@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="index.js" defer></script>
   <link rel="stylesheet" href="styles.css">
   <title>Sign up Form</title>
 </head>
@@ -32,39 +33,52 @@
       </p>
     </div>
 
-    <form action="" method="">
+    <form name="form" action="" method="">
       <div class="form-main">
         <strong>Let's do this!</strong>
         <fieldset>
           <legend>Sign up</legend>
           <div class="form-left">
             <ul>
-              <li><label for="firstname">First Name <span aria-label="required">*</span></label>
-                <input type="text" required minlength="2" maxlength="20" autocomplete="given-name">
+              <li id="firstname">
+                <label for="firstname">First Name <span aria-label="required">*</span></label>
+                <input name="firstname" type="text" required minlength="2" maxlength="30" autocomplete="given-name">
+                <span class="is-valid"></span>
+                <p class="validation-error"></p>
               </li>
-              <li>
+              <li id="surname">
                 <label for="surname">Last Name <span aria-label="required">*</span></label>
-                <input type="text" required minlength="2" maxlength="20" autocomplete="family-name">
+                <input name="surname" type="text" required minlength="2" maxlength="30" autocomplete="family-name">
+                <span class="is-valid"></span>
+                <p class="validation-error"></p>
               </li>
-              <li>
+              <li id="email">
                 <label for="email">Email <span aria-label="required">*</span></label>
-                <input type="email" required maxlength="60" inputmode="email" autocomplete="email">
+                <input name="email" type="email" required maxlength="99" inputmode="email" autocomplete="email">
+                <span class="is-valid"></span>
+                <p class="validation-error"></p>
               </li>
             </ul>
           </div>
           <div class="form-right">
             <ul>
-              <li>
+              <li id="phone">
                 <label for="phone">Phone Number</label>
-                <input type="tel" minlength="10" maxlength="10" pattern="\d{10}" inputmode="tel" autocomplete="tel">
+                <input name="phone" type="tel" inputmode="tel" minlength="10" maxlength="14" autocomplete="tel">
+                <span class="is-valid"></span>
+                <p class="validation-error"></p>
               </li>
-              <li>
+              <li id="password">
                 <label for="password">Password <span aria-label="required">*</span></label>
-                <input type="password" required minlength="9" maxlength="64" autocomplete="new-password">
+                <input id="password" name="password" type="password" required minlength="8" maxlength="64" autocomplete="new-password">
+                <span class="is-valid"></span>
+                <p class="validation-error"></p>
               </li>
-              <li>
-                <label for="passwordconfirm">Password Confirm<span aria-label="required">*</span></label>
-                <input type="password" required minlength="9" maxlength="64" autocomplete="new-password">
+              <li id="passwordConfirm">
+                <label for="password-confirm">Password Confirm<span aria-label="required">*</span></label>
+                <input name="passwordConfirm" type="password" required minlength="8" maxlength="64" autocomplete="new-password">
+                <span class="is-valid"></span>
+                <p class="validation-error"></p>
               </li>
             </ul>
           </div>

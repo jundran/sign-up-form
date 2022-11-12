@@ -44,7 +44,7 @@ img {
 
 .logo span {
   font-family: "norse bold" ;
-  font-size: 4rem;
+  font-size: 64px;
   color: #fff;
   padding-left: 8px;
 }
@@ -83,20 +83,25 @@ img {
 
 fieldset {
   display: flex;
-  gap: 80px;
   border: none;
   padding: 0;
+  gap: 32px;
+}
+
+fieldset > div {
+  flex-grow: 1;
+  margin-top: 16px;
 }
 
 legend {
-  /* For screen readers only */
+  /* Legend is for screen readers only */
   overflow: hidden;
   height: 0;
 }
 
 ul {
   list-style: none;
-  margin: 16px 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -105,14 +110,14 @@ li + li {
 }
 
 label {
- text-transform: uppercase;
- font-size: .75rem;
- font-weight: 600;
- letter-spacing: 1.5px;
+  display: block;
+  text-transform: uppercase;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
 }
 
 input {
-  display: block;
   border: 1px solid #E5E7EB;
   border-radius: 4px;
 }
@@ -132,6 +137,14 @@ input:focus {
   outline: none;
   border: 1px solid blue;
   box-shadow: 1px 1px 2px #444;
+}
+
+.validation-error {
+  min-height: 27px;
+  margin: 0;
+  font-size: .6rem;
+  font-family: monospace;
+  color: red;
 }
 
 button {
@@ -165,19 +178,19 @@ button:hover {
   font-weight: 700;
 }
 
-@media(max-width: 700px) {
-  .image-container {
-    position: relative;
-    max-width: 100%;
-  }
-
-  .container,
+@media(max-width: 950px) {
   fieldset {
     flex-direction: column;
     gap: 0;
   }
+}
 
-  .form-right ul{
-    margin-top: 0;
+@media(max-width: 700px) {
+  .image-container {
+    max-width: 100%;
+  }
+
+  .container {
+    flex-direction: column;
   }
 }
