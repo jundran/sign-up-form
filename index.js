@@ -3,6 +3,7 @@ const form = document.forms.form
 // Change event triggers after input then focus loss
 form.addEventListener("input", e => handleInputOrChange(e.target.name))
 form.addEventListener("change", e => handleInputOrChange(e.target.name, true))
+document.querySelector(".show-password").addEventListener("click", togglePasswordVisibility)
 
 function handleInputOrChange(name, forceUserInterfaceUpdate) {
   // Passed in event target name attribute is the same as its parent's id in the HTML
@@ -76,5 +77,18 @@ function passwordConfirmIsValid(input) {
   else {
     input.setCustomValidity("Passwords don't match")
     return false
+  }
+}
+
+function togglePasswordVisibility(e) {
+  if(form.password.type === "text") {
+    form.password.type = "password"
+    form.passwordConfirm.type = "password"
+    e.target.textContent = "Show password"
+  }
+  else {
+    form.password.type = "text"
+    form.passwordConfirm.type = "text"
+    e.target.textContent = "Hide password"
   }
 }
