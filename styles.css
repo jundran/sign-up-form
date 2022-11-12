@@ -7,7 +7,7 @@ body {
   margin: 0;
   color:#222;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 10fr 22fr;
   min-height: 100vh;
 }
 
