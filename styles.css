@@ -92,9 +92,9 @@ legend {
 
 ul {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: max-content max-content;
   grid-template-rows: 1fr 1fr 1fr;
-  column-gap: 32px;
+  column-gap: 15%;
   row-gap: 16px;
   margin: 16px 0 0 0;
   padding: 0;
@@ -191,12 +191,12 @@ button:hover {
     grid-template-columns: auto;
   }
   ul {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: max-content max-content;
     grid-template-rows: auto;
   }
 }
 
-@media(max-width: 550px) {
+@media(max-width: 560px) {
   ul {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
