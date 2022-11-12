@@ -10,84 +10,76 @@
 </head>
 <body>
 
-<div class="container">
-  <div class="image-container">
-    <img src="images/manuel-will-gd3t5Dtbwkw-unsplash.jpg" alt="">
-    <div class="logo">
-      <img src="images/odin-logo.png" alt="odin-logo">
-      <span>Odin</span>
-    </div>
-    <p class="photo-credit">
-      Photo by <a href="https://unsplash.com/@manufactured">Manuel Will</a> on 
-      <a href="https://unsplash.com/photos/gd3t5Dtbwkw">Unsplash</a>
+<div class="image-container">
+  <img src="images/manuel-will-gd3t5Dtbwkw-unsplash.jpg" alt="">
+  <div class="logo">
+    <img src="images/odin-logo.png" alt="odin-logo">
+    <span>Odin</span>
+  </div>
+  <p class="photo-credit">
+    Photo by <a href="https://unsplash.com/@manufactured">Manuel Will</a> on 
+    <a href="https://unsplash.com/photos/gd3t5Dtbwkw">Unsplash</a>
+  </p>
+</div>
+
+<div class="main">
+  <div class="hero">
+    <p>
+      This is not a real online service! You know you need something like this in your life to
+      help you realize your deepest dreams.<br>
+      Sign up <em>now</em> to get started. <br> <br>
+      You <em>know</em> you want to.
     </p>
   </div>
 
-  <div class="main">
-    <div class="hero">
-      <p>
-        This is not a real online service! You know you need something like this in your life to
-        help you realize your deepest dreams.<br>
-        Sign up <em>now</em> to get started. <br> <br>
-        You <em>know</em> you want to.
-      </p>
+  <form name="form" action="" method="">
+    <div class="form-main">
+      <strong>Let's do this!</strong>
+      <fieldset>
+        <legend>Sign up</legend>
+        <ul>
+          <li id="firstname">
+            <label for="firstname">First Name <span aria-label="required">*</span></label>
+            <input name="firstname" type="text" required minlength="2" maxlength="30" autocomplete="given-name">
+            <span class="is-valid"></span>
+            <p class="validation-error"></p>
+          </li>
+          <li id="surname">
+            <label for="surname">Last Name <span aria-label="required">*</span></label>
+            <input name="surname" type="text" required minlength="2" maxlength="30" autocomplete="family-name">
+            <span class="is-valid"></span>
+            <p class="validation-error"></p>
+          </li>
+          <li id="email">
+            <label for="email">Email <span aria-label="required">*</span></label>
+            <input name="email" type="email" required maxlength="99" inputmode="email" autocomplete="email">
+            <span class="is-valid"></span>
+            <p class="validation-error"></p>
+          </li>
+          <li id="phone">
+            <label for="phone">Phone Number</label>
+            <input name="phone" type="tel" inputmode="tel" minlength="10" maxlength="14" autocomplete="tel">
+            <span class="is-valid"></span>
+            <p class="validation-error"></p>
+          </li>
+          <li id="password">
+            <label for="password">Password <span aria-label="required">*</span></label>
+            <input id="password" name="password" type="password" required minlength="8" maxlength="64" autocomplete="new-password">
+            <span class="is-valid"></span>
+            <p class="validation-error"></p>
+          </li>
+          <li id="passwordConfirm">
+            <label for="password-confirm">Password Confirm<span aria-label="required">*</span></label>
+            <input name="passwordConfirm" type="password" required minlength="8" maxlength="64" autocomplete="new-password">
+            <span class="is-valid"></span>
+            <p class="validation-error"></p>
+          </li>
+        </ul>
+      </fieldset>
     </div>
-
-    <form name="form" action="" method="">
-      <div class="form-main">
-        <strong>Let's do this!</strong>
-        <fieldset>
-          <legend>Sign up</legend>
-          <div class="form-left">
-            <ul>
-              <li id="firstname">
-                <label for="firstname">First Name <span aria-label="required">*</span></label>
-                <input name="firstname" type="text" required minlength="2" maxlength="30" autocomplete="given-name">
-                <span class="is-valid"></span>
-                <p class="validation-error"></p>
-              </li>
-              <li id="surname">
-                <label for="surname">Last Name <span aria-label="required">*</span></label>
-                <input name="surname" type="text" required minlength="2" maxlength="30" autocomplete="family-name">
-                <span class="is-valid"></span>
-                <p class="validation-error"></p>
-              </li>
-              <li id="email">
-                <label for="email">Email <span aria-label="required">*</span></label>
-                <input name="email" type="email" required maxlength="99" inputmode="email" autocomplete="email">
-                <span class="is-valid"></span>
-                <p class="validation-error"></p>
-              </li>
-            </ul>
-          </div>
-          <div class="form-right">
-            <ul>
-              <li id="phone">
-                <label for="phone">Phone Number</label>
-                <input name="phone" type="tel" inputmode="tel" minlength="10" maxlength="14" autocomplete="tel">
-                <span class="is-valid"></span>
-                <p class="validation-error"></p>
-              </li>
-              <li id="password">
-                <label for="password">Password <span aria-label="required">*</span></label>
-                <input id="password" name="password" type="password" required minlength="8" maxlength="64" autocomplete="new-password">
-                <span class="is-valid"></span>
-                <p class="validation-error"></p>
-              </li>
-              <li id="passwordConfirm">
-                <label for="password-confirm">Password Confirm<span aria-label="required">*</span></label>
-                <input name="passwordConfirm" type="password" required minlength="8" maxlength="64" autocomplete="new-password">
-                <span class="is-valid"></span>
-                <p class="validation-error"></p>
-              </li>
-            </ul>
-          </div>
-        </fieldset>
-      </div>
-      <button type="submit">Create Account</button>
-      <p class="login">Already have an account? <a href="#">Log in</a></p>
-    </form>
-  </div>
+    <button type="submit">Create Account</button>
+    <p class="login">Already have an account? <a href="#">Log in</a></p>
+  </form>
 </div>
 
 </body>
